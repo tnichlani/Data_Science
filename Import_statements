@@ -1,1 +1,15 @@
+import numpy as np
+import pandas as pd
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+import missingno as msno
+
+
+import warnings
+warnings.filterwarnings('ignore')
+
+
+
 
