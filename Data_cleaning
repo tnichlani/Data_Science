@@ -1,1 +1,34 @@
 
+Some of the command which will help you During cleaning process.
+
+Missing value in %
+round(100*(df.isnull().sum()/len(df.Id)), 2)
+
+Return missing value in Categorical column only
+missing =round(100*df.select_dtypes(include='object').isnull().sum()/len(df.Id)),2) missing.loc[missing > 0]
+
+Return missing value in Numeric Column only
+missing =round(100*(df.select_dtypes(include=['int64','float']).isnull().sum()/len(df.Id)),2)
+
+missing.loc[missing > 0]
+
+Drop the columns where all elements are missing values:
+df.dropna(axis=1, how='all')
+
+Drop the columns where any of the elements are missing values
+df.dropna(axis=1, how='any')
+
+Keep only the rows which contain 2 missing values maximum
+df.dropna(thresh=2)
+
+Drop the columns where any of the elements are missing values
+df.dropna(axis=1, how='any')
+
+Fill all missing values with the mean of the particular column
+df.fillna(df.mean())
+
+Fill any missing value in column 'A' with the column median
+df['A'].fillna(df['A'].median())
+
+Fill any missing value in column 'Depeche' with the column mode
+df['Depeche'].fillna(df['Depeche'].mode())
