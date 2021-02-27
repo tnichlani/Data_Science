@@ -6,9 +6,13 @@ import matplotlib.pyplot as plt
 
 import missingno as msno
 
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
 
 import warnings
 warnings.filterwarnings('ignore')
+
+
 
 
 
